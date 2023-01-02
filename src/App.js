@@ -1,13 +1,10 @@
 import './App.css';
-import Header from './jsx/header';
-import Main from './jsx/main'
-
+import List from './jsx/List';
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
+      <List />
     </>
   );
 }
