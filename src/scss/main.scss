@@ -1,48 +1,60 @@
-* {
-    margin: 0;
-    padding: 0;
+$box-center: 0 auto;
+$box-width: 80%; 
+
+.MuiBox-root {
+    width: $box-width;
+    margin: $box-center;
 }
 
-section {
-    margin: 0 auto;
-    width: 80%;
-    background-color: aqua;
-    > div {
-        display: flex;
-        justify-content: space-between;
-        > div {
-            &:first-of-type {
-                width: 45%;
-                height: 500px;
-                background-color: bisque;  
-            }
-            &:last-of-type {
-                width: 50%;
-                background-color: brown;
-                display: flex;
-                justify-content: space-evenly;
-                flex-direction: column;
-                align-items: center;
-                > div {
-                    width: 90%;
-                    &:first-of-type {
-                        height: 200px;
-                        background-color: cadetblue;
-                    }
-                    &:nth-of-type(2) {
-                        height: 100px;
-                        background-color: wheat;
-                    }
-                    &:last-of-type {
-                        display: flex;
-                        justify-content: space-between;
-                        button {
-                            width: 45%;
-                            height: 50px;
-                        }
-                    }
-                }
+.user-info__body {
+    &.MuiPaper-root {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .body-wrap {
+        width: 90%;
+        margin: $box-center;
+        &__top{
+            h3 {
+                margin: 0;
             }
         }
+        .MuiDivider-root{
+            border-width: 1px;
+            margin: 10px 0;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &__info {
+                width: calc(100% - 100px);
+                th {
+                    text-align: left;
+                    font-weight: normal;
+                    padding: 5px 15px;
+                    width: 20%;
+                    vertical-align: baseline;
+                }
+            }
+            &__btn {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}
+.user-info__popup {
+    &__wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 500px;
+        background-color: white;
     }
 }

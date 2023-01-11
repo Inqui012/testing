@@ -74,10 +74,10 @@ const cards = (name, price) => {
 export default function OutlinedCard() {
     return (
         <>
-        <Box sx={{width: '80%', margin: '0 auto'}}>
+        <Box>
             <h2>상품리스트</h2>        
         </Box>
-        <Box sx={{ width: '80%', display: 'flex', margin: '0 auto', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-around' }}>
             {prods.map((p) => (
                 <Card sx={{ width: 1/5, boxSizing: 'border-box'}} variant="outlined">{cards(p.name, p.price)}</Card>
             ))}
