@@ -33,8 +33,8 @@ const UserCart = () => {
             <div className='user-cart__header'>
                 <h2>장바구니</h2>
             </div>
-            <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableContainer component={Paper} className='user-cart__body'>
+                <Table className='cart-table' sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             <TableCell colSpan={2} align="center">상품정보</TableCell>
@@ -46,7 +46,7 @@ const UserCart = () => {
                         {rows.map((row) => (
                             <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                 <TableCell><Checkbox /></TableCell>
-                                <TableCell component="th" scope="row">
+                                <TableCell component="th" scope="row" className=''>
                                     <div>
                                         <img src={row.product.image} alt="" />
                                     </div>
