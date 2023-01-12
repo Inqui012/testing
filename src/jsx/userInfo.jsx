@@ -32,7 +32,7 @@ const UserInfo = () => {
                 <tr>
                   <th>주소 : </th>
                   <td>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo accusantium quis dolor, autem minus cumque explicabo modi soluta ad debitis ipsam iure, voluptate quae maxime sequi tenetur repellendus aliquid incidunt.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   </td>
                 </tr>
                 <tr>
