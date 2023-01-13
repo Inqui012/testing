@@ -62,13 +62,70 @@ $box-width: 80%;
 .user-cart__body {
     &.MuiPaper-root {
     width: 100%;
-    padding: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     }
-    .body-wrap {
+    .thead-btn {
+        position: relative;
+        .cart-chkbtn {
+            position: absolute;
+            bottom: 0;
+            left: 6px;
+        }
+    }
+    .cart-table {
+        min-Width: 650;
         width: 90%;
-        margin: $box-center;
+        margin: 0 auto;
+        .col-prod {
+            display: flex;
+            justify-content: flex-start;
+            &__img {
+                border: 1px solid rgba(224, 224, 224, 1);
+                width: 100px;
+                height: 100px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__info {
+                width: calc(100% - 100px);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                &__name {
+                    .MuiButtonBase-root {
+                        max-width: 300px;
+                        color: inherit;
+                        font-size: 1.1em;
+                        text-align: left;
+                        b {
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            display: inline-block;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                &__opt {
+                    color: #979797;
+                    padding: 0 0.5em;
+                    p {
+                        font-size: 0.9em;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+            
+        }
+    }
+    .cart-cnfbtn {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 10px;
+        text-align: right;
     }
 }
