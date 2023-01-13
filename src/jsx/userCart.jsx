@@ -13,34 +13,37 @@ import IconButton from '@mui/material/IconButton';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-function createData(num, product, quantity, price) {
-    return { num, product, quantity, price };
+function createData(num, product, quantity) {
+    return { num, product, quantity };
 }
 
 const product = {
     name: '베이직 풀밴드형 남성 보드숏',
     image: "../img/940x1253.png",
-    size: 30
+    size: 30,
+    price: 5000
 }
 
 const product2 = {
     name: '베이직 풀밴드형 남성 보드숏loooooooooooooooooooooooog',
     image: "../img/940x1253.png",
-    size: 30
+    size: 30,
+    price: 5000
 }
 
 const product3 = {
     name: '베이직 풀밴드형 남성 보드숏',
     image: "../img/940x1253.png",
-    size: 90
+    size: 90,
+    price: 7000
 }
 
 const rows = [
-    createData(0, product, 10, 5000),
-    createData(1, product, 10, 5000),
-    createData(2, product3, 10, 5000),
-    createData(3, product, 10, 5000),
-    createData(4, product2, 10, 5000),
+    createData(0, product, 10),
+    createData(1, product, 10),
+    createData(2, product3, 10),
+    createData(3, product, 10),
+    createData(4, product2, 10),
 ];
 
 
@@ -92,7 +95,7 @@ const UserCart = () => {
     const totalPrice = (row) => {
         let price = 0;
         row.map((n) => {
-            return price += (n.price * n.quantity);
+            return price += (n.product.price * n.quantity);
         })
         return price;
     };
@@ -147,7 +150,7 @@ const UserCart = () => {
                                             </div>
                                         </TableCell>
                                         <TableCell align="right">{row.quantity}</TableCell>
-                                        <TableCell align="right">{row.price}</TableCell>
+                                        <TableCell align="right">{row.product.price}</TableCell>
                                     </TableRow>
                                 );
                             })}
