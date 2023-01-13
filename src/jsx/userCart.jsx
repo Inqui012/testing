@@ -36,11 +36,11 @@ const product3 = {
 }
 
 const rows = [
-    createData(0, product, 10, 555555),
-    createData(1, product, 10, 555555),
-    createData(2, product3, 10, 555555),
-    createData(3, product, 10, 555555),
-    createData(4, product2, 10, 555555),
+    createData(0, product, 10, 5000),
+    createData(1, product, 10, 5000),
+    createData(2, product3, 10, 5000),
+    createData(3, product, 10, 5000),
+    createData(4, product2, 10, 5000),
 ];
 
 
@@ -89,6 +89,13 @@ const UserCart = () => {
         alert('test');
     }
     const isSelected = (num) => selected.indexOf(num) !== -1;
+    const totalPrice = (row) => {
+        let price = 0;
+        row.map((n) => {
+            return price += (n.price * n.quantity);
+        })
+        return price;
+    };
 
     return (
         <Box className='user-cart'>
@@ -146,7 +153,10 @@ const UserCart = () => {
                             })}
                         </TableBody>
                     </Table>
-                    <div className='cart-cnfbtn'>
+                    <div className='cart-cnf'>
+                        <div className='cart-cnf__price'>
+                            <span>총 주문 금액 : <p>{totalPrice(cartList)} 원</p></span>
+                        </div>
                         <Button variant="contained" type='submit'>주문하기</Button>
                     </div>
                 </form>
@@ -154,5 +164,4 @@ const UserCart = () => {
         </Box>
     );
 }
-
 export default UserCart;
