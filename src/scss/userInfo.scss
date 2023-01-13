@@ -1,0 +1,60 @@
+$box-center: 0 auto;
+$box-width: 80%; 
+
+.MuiBox-root {
+    width: $box-width;
+    margin: $box-center;
+}
+
+.user-info__body {
+    &.MuiPaper-root {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    .body-wrap {
+        width: 90%;
+        margin: $box-center;
+        &__top{
+            h3 {
+                margin: 0;
+            }
+        }
+        .MuiDivider-root{
+            border-width: 1px;
+            margin: 10px 0;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &__info {
+                width: calc(100% - 100px);
+                th {
+                    text-align: left;
+                    font-weight: normal;
+                    padding: 5px 15px;
+                    width: 20%;
+                    vertical-align: baseline;
+                }
+            }
+            &__btn {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}
+.user-info__popup {
+    &__wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        height: 500px;
+        background-color: white;
+    }
+}
