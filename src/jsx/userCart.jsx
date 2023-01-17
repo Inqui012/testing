@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import DeleteIcon from '@mui/icons-material/Delete';
+import '../scss/userCart.scss'
 
 function createData(num, product, quantity) {
     return { num, product, quantity };
